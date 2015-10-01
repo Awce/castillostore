@@ -1,0 +1,21 @@
+en:
+
+  landing:
+      index:
+            title: 'Estamos construyendo una mejor experiencia.'
+            brand: 'El Castillo de la Fantasía'
+            copy: 'Desde 1984, Ofreciendo le venta al Mayoreo y Menudeo de Bisutería de temporada, Pelucas de Cabello Natural, Sintético, Venta y preparación de Extensiones de cabello.'
+            message: 'Te ofrecemos una plataforma completa, ahora será más fácil comprar.'
+            alert: 'Puedes dejarnos tu nombre y tu correo, te avisaremos cuando el sitio esté disponible.'
+            name: 'Ejemplo: Raúl Hernandez'
+            email: 'Ejemplo: hola@elcastillo.com'
+            register: 'Enviar.'
+            homes: 'También puedes visitarnos en cualquiera de nuestras 2 casas:'
+            image: 'matriz.jpg'
+            image1: 'sucursal.jpg'
+            title-suc: 'Matriz'
+            address-suc: 'Justo Sierra No. 41, Col. Centro, Del. Cuauhtemoc, México D.F., C.P. 06020'
+            address-suc-tel: '55 22 11 13'
+            title-suc1: 'Sucursal'
+            address-suc1: 'Del Carmen 32-B, Col. Centro, Del. Cuauhtemoc, México D.F., C.P. 06020'
+            address-suc-tel1: '57 02 08 01'

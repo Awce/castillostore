@@ -1,0 +1,33 @@
+<header class="animated fadeIn">
+  <div class="row">
+    <div class="large-12 columns cuadro1">
+      <h1 class="cuadro">Regístrate</h1>
+
+      <%= form_for @identity, url: identity_path do |form| %>
+        <% if @identity.errors.any? %>
+          <h2>Datos no correctos</h2>
+          <ul>
+            <% for message in @identity.errors.full_messages %>
+              <li><%= message %>
+            <% end %>
+          </ul>
+        <% end %>
+
+        <p>
+          <%= form.label :email %>
+          <%= form.text_field :email %>
+        </p>
+        <p>
+          <%= form.label :password %>
+          <%= form.password_field :password %>
+        </p>
+        <p>
+          <%= form.label :password_confirmation %>
+          <%= form.password_field :password_confirmation %>
+        </p>
+        <%= form.submit  "Regístrate", :class => 'button small radius'%>
+      <% end %>
+
+    </div>
+  </div>
+</header>

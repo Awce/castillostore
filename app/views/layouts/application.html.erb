@@ -1,14 +1,36 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>Castillostore</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<%= yield %>
+    <title><%= content_for?(:title) ? yield(:title) : "El Castillo de la Fantasía | Joyería de Fantasía Fina, Pelucas y Postizos, Extensiones de Cabello y todo lo relacionado al Cabello." %></title>
+    <link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz' rel='stylesheet' type='text/css'>
 
-</body>
+    <%= stylesheet_link_tag    "application" %>
+    <%= javascript_include_tag "vendor/modernizr" %>
+    <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+  </head>
+
+  <body>
+
+    <%= render :partial => "layouts/navbar" %>
+
+    <%= yield %>
+
+    <%= render :partial => "layouts/footer" %>
+
+    <% if Rails.env.production? %>
+      <%= render 'layouts/analytics' %>
+      <script type="text/javascript">
+        window.$zopim||(function(d,s){var z=$zopim=function(c){z._.push(c)},$=z.s=
+        d.createElement(s),e=d.getElementsByTagName(s)[0];z.set=function(o){z.set.
+        _.push(o)};z._=[];z.set._=[];$.async=!0;$.setAttribute("charset","utf-8");
+        $.src="//v2.zopim.com/?2B4mKF0A82Q0vzpC6BQ3T8MjkKH81zVk";z.t=+new Date;$.
+        type="text/javascript";e.parentNode.insertBefore($,e)})(document,"script");
+      </script>
+    <% end %>
+
+  </body>
 </html>
