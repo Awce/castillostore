@@ -1,0 +1,23 @@
+<header class="animated fadeIn">
+  <div class="row">
+    <div class="large-12 columns cuadro1">
+      <h1 class="cuadro">Iniciar sesión</h1>
+
+      <%= form_for @identity, url: sessions_path do |form| %>
+        <%- if warden_message %>
+          <div class='alert cuadro'><%= warden_message %></div>
+        <% end %>
+
+        <p>
+          <%= form.label :email %><br />
+          <%= form.text_field :email %>
+        </p>
+        <p>
+          <%= form.label :password %><br />
+          <%= form.password_field :password %>
+        </p>
+        <%= form.submit "Iniciar sesión", :class => 'button small radius' %>
+      <% end %>
+    </div>
+  </div>
+</header>

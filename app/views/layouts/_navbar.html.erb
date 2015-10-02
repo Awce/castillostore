@@ -1,0 +1,39 @@
+<nav class="navbar" role="navigation">
+    <div class="row" data-equalizer>
+      <div class="small-12 medium-8 large-4 columns">
+        <figure>
+          <%= link_to image_tag("logo.png", :alt=> "logo"), root_path %>
+        </figure>
+      </div>
+      <div class="large-8 columns">
+        <nav>
+          <ul class="legals1">
+            <% if identity_signed_in?  %>
+            <%= link_to "Cerrar sesión", log_out_path, method: :delete, :class => 'navbar-link'  %> |
+            <%= image_tag "min.png", :alt => "Mi cesta" %>
+            <% else %>
+            <%= link_to "Regístrate", sign_up_path, :class => 'navbar-link'  %> |
+            <%= link_to "Inicia sesión", log_in_path, :class => 'navbar-link'  %>
+            <% end  %>
+          </ul>
+        </nav>
+        <div class="row">
+          <div class="animated slideInDown small-12 text-right columns">
+            <h6>Tu sucursal mas cercana es: <i class="fa fa-map-marker"></i> <strong>Justo Sierra</strong><a href="" data-reveal-id="myModal"> ¿Como llegar?</a>
+              <% if notice %>
+                <%= notice %>
+              <% end %>
+              <% if alert %>
+                <%= alert %>
+              <% end %>
+            </h6>
+          </div>
+        </div>
+      </div>
+    </div>
+</nav>
+
+<div id="myModal" class="reveal-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
+  <h3 id="modalTitle">Como llegar.</h3>
+  <a class="close-reveal-modal" aria-label="Close">&#215;</a>
+</div>
