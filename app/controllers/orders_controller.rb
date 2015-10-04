@@ -1,9 +1,9 @@
 class OrdersController < ApplicationController
-
+  before_action :authenticate!
   def destroy
     current_order.destroy
     session[:order_id] = nil
-    redirect_to root_path, :notice => "Basket emptied successfully."
+    redirect_to root_path, :notice => "Carrito vacio."
   end
 
   def checkout
@@ -25,7 +25,7 @@ class OrdersController < ApplicationController
     if request.post?
       current_order.confirm!
       session[:order_id] = nil
-      redirect_to root_path, :notice => "Order has been placed successfully!"
+      redirect_to root_path, :notice => "El pedido se ha realizado con éxito."
     end
   end
 

@@ -22,16 +22,16 @@
 en:
   sessions:
     new:
-      log_in: 'Log in'
+      log_in: 'Iniciar sesión'
     create:
-      invalid_credentials: 'Your credentials are invalid'
-      logged_in: 'Welcome back!'
+      invalid_credentials: 'Sus credenciales no son válidas.'
+      logged_in: '¡Bienvenido de vuelta!'
     destroy:
-      logged_out: 'See you later!'
+      logged_out: '¡Hasta luego!'
   identities:
     new:
-      create: 'Create identity'
+      create: 'Crear cuenta'
     create:
-      sign_up: 'Welcome to your new account!'
+      sign_up: 'Bienvenido a tu nueva cuenta!'
 
   hello: "Hello world"

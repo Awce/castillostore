@@ -13,4 +13,3 @@ class SessionsController < ApplicationController
     redirect_to root_url, notice: t('.logged_out')
   end
 end
-

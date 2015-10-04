@@ -1,0 +1,11 @@
+<div class="bar">
+    <div class="filter">
+      <button class="action filter__item filter__item--selected" data-filter="*">Todos</button>
+      <% @products.each do |category, products| %>
+      <button class="action filter__item" data-filter="<%= category.name %>">
+          <i class="icon icon--jacket"></i>
+          <span class="action__text"><%= category.name %></span>
+      </button>
+      <% end %>
+    </div>
+</div>

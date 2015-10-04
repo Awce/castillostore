@@ -1,17 +1,21 @@
-<h2><%= @product.name %></h2>
+<div class="row contact">
+  <div class="large-12 columns">
+    <h3><%= @product.name %></h3>
+  </div>
+  <div class="large-4 columns">
+    <% if @product.default_image %>
+      <%= image_tag @product.default_image.path, :width => '200px', :style => "float:right" %>
+    <% end %>
+  </div>
+  <div class="large-8 columns">
+    <p><%= @product.short_description %></p>
+    <p>
+      <%= link_to "Agregar: #{number_to_currency @product.price}", product_path(@product.permalink), :method => :post, :class => 'button small radius' %>
+    </p>
 
-<% if @product.default_image %>
-  <%= image_tag @product.default_image.path, :width => '200px', :style => "float:right" %>
-<% end %>
-
-<p><%= @product.short_description %></p>
-<p>
-  <b><%= number_to_currency @product.price %></b>
-  <%= link_to "Add to basket", product_path(@product.permalink), :method => :post %>
-</p>
-
-<hr>
-<%= simple_format @product.description %>
-<hr>
-
-<p><%= link_to "Back to list", root_path %></p>
+    <hr>
+    <%= simple_format @product.description %>
+    <hr>
+    <%= link_to "Continuar comprando", products_url, :class => 'button small radius' %>
+  </div>
+</div>

@@ -1,17 +1,27 @@
-<h2>Products</h2>
-
-<% @products.each do |category, products| %>
-  <h3><%= category.name %></h3>
-  <ul>
-    <% products.each do |product| %>
-    <li>
-      <figure>
-        <%= image_tag product.default_image.path, :width => '100px' %>
-      </figure>
-      <h4><%= link_to product.name, product_path(product.permalink) %></h4>
-      <p><%= product.short_description %></p>
-      <p><b>Price:</b> <%= number_to_currency product.price %></p>
-    </li>
+<div class="row">
+  <div class="large-12 columns">
+    <% @products.each do |category, products| %>
+      <h4><%= category.name %></h4>
+      <% products.each do |product| %>
+      <section class="product">
+        <div class="slider">
+            <div class="slider__item"><%= image_tag product.default_image %></div>
+        </div>
+        <div class="meta">
+          <h3 class="meta__title"><%= link_to product.name, product_path(product.permalink) %></h3>
+          <span class="meta__brand"><%= product.sku %></span>
+          <span class="meta__price"><%= number_to_currency product.price %></span>
+        </div>
+        <button class="action action--button action--buy">
+            <i class="fa fa-shopping-cart"></i>
+            <span class="text-hidden">Add to cart</span>
+        </button>
+        <%= link_to "Agregar al carrito", product_path(product.permalink), :method => :post, :class => 'button tiny expand radius' %>
+      </section>
+      <% end %>
     <% end %>
-  </ul>
-<% end %>
+  </div>
+</div>
+
+
+<%= render :partial => "products/bar" %>
