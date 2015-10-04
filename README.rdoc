@@ -6,23 +6,35 @@ application up and running.
 Things you may want to cover:
 
 * Ruby version
+  - ruby 2.1.5p273 (2014-11-13 revision 48405) [i386-mingw32]
 
 * System dependencies
+  - mac_generators
+  - mini_magick
+  - carrierwave
+  - shoppe
 
 * Configuration
+  - install mac_generators:
+    https://github.com/mariochavez/mac_generators by: https://github.com/mariochavez aka Mario Chavez.
+
+  - try shoppe:
+    http://tryshoppe.com/
 
 * Database creation
-
+  - Postgresql
+   $ rails new myapp -d postgresql
+   $ rake db:create
 * Database initialization
-
+  - Postgresql
+   $ rake db.migrate
 * How to run the test suite
 
 * Services (job queues, cache servers, search engines, etc.)
 
 * Deployment instructions
-
-* ...
-
+  - in heroku
+    https://devcenter.heroku.com/articles/getting-started-with-rails4
 
 Please feel free to use a different markup language if you do not plan to run
 <tt>rake doc:app</tt>.
