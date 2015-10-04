@@ -9,8 +9,11 @@
         <nav>
           <ul class="legals1">
             <% if identity_signed_in?  %>
+            <%= link_to "Checkout", checkout_path %> |
+            <%= link_to 'Empty basket', basket_path, :method => :delete %> |
+            <%= link_to "View basket", basket_path %> |
             <%= link_to "Cerrar sesión", log_out_path, method: :delete, :class => 'navbar-link'  %> |
-            <%= image_tag "min.png", :alt => "Mi cesta" %>
+            <%= image_tag "min.png", :alt => "Mi cesta" %> <span class="label radius"><%= pluralize current_order.total_items, 'item' %></span>
             <% else %>
             <%= link_to "Regístrate", sign_up_path, :class => 'navbar-link'  %> |
             <%= link_to "Inicia sesión", log_in_path, :class => 'navbar-link'  %>
