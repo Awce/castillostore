@@ -3,9 +3,10 @@
     <% @products.each do |category, products| %>
       <h4><%= category.name %></h4>
       <% products.each do |product| %>
+      
       <section class="product">
         <div class="slider">
-            <div class="slider__item"><%= image_tag product.default_image %></div>
+            <div class="slider__item">x</div>
         </div>
         <div class="meta">
           <h3 class="meta__title"><%= link_to product.name, product_path(product.permalink) %></h3>
