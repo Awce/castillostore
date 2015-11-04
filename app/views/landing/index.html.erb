@@ -1,20 +1,16 @@
-<header class="animated fadeIn">
+<div class="animated fadeIn" id="fondorand">
   <div class="row">
-    <div class="large-6 columns cuadro">
-      <h1 class="cuadro"><%= t(".brand") %></h1>
-        <h3 class="cuadro"> <%= t(".copy") %> </h3>
-    </div>
-    <div class="large-12 text-center columns">
+    <div class="col s12 m12 l12 center-align">
       <div class="logo">
         <figure>
           <%= image_tag "bag.png", :alt => t(".brand") %>
         </figure>
       </div>
-      <div class="large-12 columns cuadro1">
-        <h4 class="cuadro">Recibe en tu correo las ofertas y promociones que tenemos, suscríbete a nuestro boletín.</h4>
-        <a href="" class="button tiny radius" data-reveal-id="myModal1"><i class="fa fa-newspaper-o"></i> ¡Suscribirme ahora!</a>
-      </div>
+    </div>
+    <div class="col s12 m12 s12 center-align">
+      <h1 class="title white-text lighten-5"><%= t(".brand") %></h1>
+      <h3 class="subtitle white-text lighten-5"> <%= t(".copy") %> </h3>
     </div>
   </div>
-</header>
+</div>
 <%= render :partial => "layouts/contact" %>

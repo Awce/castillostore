@@ -1,39 +1,33 @@
-<nav class="navbar" role="navigation">
-    <div class="row" data-equalizer>
-      <div class="small-12 medium-8 large-4 columns">
-        <figure>
-          <%= link_to image_tag("logo.png", :alt=> "logo"), root_path %>
-        </figure>
-      </div>
-      <div class="large-8 columns">
-        <nav>
-          <ul class="legals1">
-            <% if identity_signed_in?  %>
-            <%= link_to "Mi cuenta va en: #{number_to_currency current_order.total_before_tax}", basket_path %> |
-            <%= link_to "Cerrar sesión", log_out_path, method: :delete, :class => 'navbar-link' %>
-            <% else %>
-            <%= link_to "Regístrate", sign_up_path, :class => 'navbar-link'  %> |
-            <%= link_to "Inicia sesión", log_in_path, :class => 'navbar-link'  %>
-            <% end  %>
-          </ul>
-        </nav>
-        <div class="row">
-          <div class="animated slideInDown small-12 text-right columns">
-            <h6>Tu sucursal mas cercana es: <i class="fa fa-map-marker"></i> <strong>Justo Sierra</strong><a href="" data-reveal-id="myModal"> ¿Como llegar?</a>
-              <% if notice %>
-                <%= notice %>
-              <% end %>
-              <% if alert %>
-                <%= alert %>
-              <% end %>
-            </h6>
-          </div>
-        </div>
-      </div>
-    </div>
-</nav>
-
-<div id="myModal" class="reveal-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
-  <h3 id="modalTitle">Como llegar.</h3>
-  <a class="close-reveal-modal" aria-label="Close">&#215;</a>
+<div class="navbar-fixed">
+  <ul id="dropdown1" class="dropdown-content purple-text">
+    <li><%= link_to "Productos  #{current_order.total_items}", basket_path %></li>
+    <li><%= link_to "Mi cuenta #{number_to_currency current_order.total_before_tax}", basket_path %></li>
+    <li class="divider"></li>
+    <li><%= link_to "Cerrar sesión", log_out_path, method: :delete %></li>
+  </ul>
+  <nav>
+     <div class="nav-wrapper">
+       <%= link_to image_tag("logo.png", :alt=> "logo", :class => 'brand-logo'), root_path %>
+       <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+       <ul class="right hide-on-med-and-down">
+         <% if identity_signed_in?  %>
+         <%= gravatar_image_tag(current_identity.email, :alt=> current_identity.email, :class=> 'circle responsive-img left') %>
+         <li><a class="dropdown-button" href="#!" data-activates="dropdown1"><%= current_identity.email %><i class="material-icons right">arrow_drop_down</i></a></li>
+         <% else %>
+         <li><%= link_to "Regístrate", sign_up_path  %></li>
+         <li><%= link_to "Inicia sesión", log_in_path  %></li>
+         <% end  %>
+       </ul>
+       <ul class="side-nav" id="mobile-demo">
+         <% if identity_signed_in?  %>
+         <li><%= link_to "Productos #{current_order.total_items}", basket_path %></li>
+         <li><%= link_to "Mi cuenta #{number_to_currency current_order.total_before_tax}", basket_path %></li>
+         <li><%= link_to "Cerrar sesión", log_out_path, method: :delete %></li>
+         <% else %>
+         <li><%= link_to "Regístrate", sign_up_path  %></li>
+         <li><%= link_to "Inicia sesión", log_in_path %></li>
+         <% end  %>
+       </ul>
+     </div>
+   </nav>
 </div>

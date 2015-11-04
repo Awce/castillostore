@@ -1,11 +1,11 @@
-<header class="animated fadeIn">
+<div class="animated fadeIn" id="fondorand">
   <div class="row">
-    <div class="large-12 columns cuadro1">
-      <h1 class="cuadro">Regístrate</h1>
+    <div class="col l12 cuadro1">
+      <h1 class="title white-text">Regístrate</h1>
 
       <%= form_for @identity, url: identity_path do |form| %>
         <% if @identity.errors.any? %>
-          <h2>Datos no correctos</h2>
+          <h2 class="subtitle1 pink-text">Datos no correctos</h2>
           <ul>
             <% for message in @identity.errors.full_messages %>
               <li><%= message %>
@@ -15,19 +15,21 @@
 
         <p>
           <%= form.label :email %>
-          <%= form.text_field :email %>
+          <%= form.text_field :email, :class => "white-text" %>
         </p>
         <p>
-          <%= form.label :password %>
-          <%= form.password_field :password %>
+          <%= form.label "Contraseña" %>
+          <%= form.password_field :password, :class => "white-text" %>
         </p>
         <p>
-          <%= form.label :password_confirmation %>
-          <%= form.password_field :password_confirmation %>
+          <%= form.label "Confirma tu contraseña" %>
+          <%= form.password_field :password_confirmation, :class => "white-text" %>
         </p>
-        <%= form.submit  "Regístrate", :class => 'button small radius'%>
+        <div class="row center-align">
+          <%= form.submit "Regístrate", :class => "waves-effect btn-large deep-purple darken-3"%>
+        </div>
       <% end %>
 
     </div>
   </div>
-</header>
+</div>

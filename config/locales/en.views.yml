@@ -3,7 +3,7 @@ en:
       index:
             title: 'Estamos construyendo una mejor experiencia.'
             brand: 'El Castillo de la Fantasía'
-            copy: 'Desde 1984, Ofreciendo le venta al Mayoreo y Menudeo de Bisutería de temporada, Pelucas de Cabello Natural, Sintético, Venta y preparación de Extensiones de cabello.'
+            copy: 'Venta al Mayoreo y Menudeo de Joyería de temporada, Pelucas de Cabello Natural y Sintético, venta y preparación de Extensiones.'
             message: 'Te ofrecemos una plataforma completa, ahora será más fácil comprar.'
             alert: 'Puedes dejarnos tu nombre y tu correo, te avisaremos cuando el sitio esté disponible.'
             name: 'Ejemplo: Raúl Hernandez'
@@ -18,4 +18,3 @@ en:
             title-suc1: 'Sucursal'
             address-suc1: 'Del Carmen 32-B, Col. Centro, Del. Cuauhtemoc, México D.F., C.P. 06020'
             address-suc-tel1: '57 02 08 01'
-              

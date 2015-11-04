@@ -1,7 +1,8 @@
-<h4>Mi carrito</h4>
+<h4>Mi pedido</h4>
 <%= render 'items', :order => current_order %>
-<ul class="button-group radius">
-  <li><%= link_to 'Vaciar mi carrito', basket_path, :method => :delete, :class => 'button tiny' %></li>
-  <li><%= link_to "Continuar comprando", root_path, :class => 'button tiny' %></li>
-  <li><%= link_to "Realizar pedido", checkout_path, :class => 'button tiny' %></li>
+
+<ul class=" center-align" >
+  <li><%= link_to 'Vaciar mi lista', basket_path, :method => :delete, :class => 'btn-large purple' %></li>
+  <li><%= link_to "Continuar cotizando", root_path, :class => 'btn-large purple' %></li>
+
 </ul>

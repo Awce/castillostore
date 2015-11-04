@@ -1,0 +1,155 @@
+amarillo = #FBBD35
+amarillo_claro = #EFC68A
+azul_fb  = #39579E
+azul_tt  = #5FA9DD
+blanco_bg = #FFFFFF
+crema    = #F5E5D6
+gris_claro = #818181
+gris_oscuro = #333333
+gris_mas_claro = #F0F0F0
+gris_footer = #242830
+rojo     = #D92C2C
+rojo_yt = #B80000
+verde    = #6BC2BD
+violeta = #8134CE
+transparente = rgba(0, 0, 25, 0.6)
+
+body
+  display flex
+  min-height 100vh
+  flex-direction column
+
+main
+  flex 1 0 auto
+
+#fondorand
+  background-image url('castillo.jpg')
+  background-size cover
+
+h1, h2, h3, h4
+  font-family: 'Yanone Kaffeesatz' sans-serif
+
+footer
+ background-color gris_footer
+ border-top 2px solid violeta
+ padding 40px 0 30px
+ color white
+ font-size 16px
+ line-height 28px
+ padding 30px 0
+ text-align center
+ -moz-box-sizing border-box
+ -webkit-box-sizing border-box
+ box-sizing: border-box
+
+.contact
+  background blanco_bg
+
+.imagencont
+  border-radius 50%
+  width 15%
+  height 15%
+
+.imagencont1
+  border-radius 50%
+  width 40%
+  height 40%
+  position relative
+
+.feedback, .legals, .legals1
+  font-family: 'Yanone Kaffeesatz' sans-serif
+
+.intext
+  line-height .1px
+
+.intext1
+ font-family: 'Yanone Kaffeesatz' sans-serif
+
+
+ul.legals, ul.social, ul.legals1
+  list-style none
+
+ul.legals li, ul.social li, ul.legals1 li
+  display inline-block
+
+ul.legals li::after
+  content " | "
+
+ul.legals li:last-child::after
+  content ""
+
+ul.legals
+  color blanco_bg
+  text-align center
+
+ul.social
+  font-size 3em
+  text-align center
+  .fa-twitter
+    color azul_tt
+  .fa-facebook
+    color azul_fb
+
+.title
+  font-size 3em
+  text-shadow 1px 1px transparente
+
+.subtitle
+  font-size 1.8em
+  text-shadow 1px 1px transparente
+
+.subtitle1
+  font-size 1em
+
+.cuadro1
+  background-color transparente
+  border-radius: 3px;
+  margin 5vh
+  padding 5vh
+
+.circle
+  line-height 0
+  display inline-block
+  margin 15px
+  padding auto
+  border 2px solid gris_claro
+  border-radius 50%
+  transition linear 0.25s
+  height 32px
+  width 32px
+
+// .circle img
+//   border-radius 50%
+//
+// .circle:hover
+//   transition ease-out 0.2s
+//   border 2px solid transparente
+//   -webkit-transition ease-out 0.2s
+//
+// a.circle
+//   color: transparente
+
+.logo_
+  font-size 50px
+
+ul li, .legals, .social
+  color blanco_bg
+  opacity 80%
+
+.logo2
+  font-size 60px
+
+.parallax-container
+  top 0
+  height: 10%
+
+
+
+@media screen and (max-width:960px)
+  .legals1
+    font-size 1em
+    float center
+
+@media screen and (max-width:480px)
+  .random, .intext1
+    text-align center

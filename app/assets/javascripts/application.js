@@ -11,9 +11,16 @@
 // about supported directives.
 //
 //= require jquery
+//= require materialize-sprockets
 //= require jquery_ujs
 //= require foundation
 //= require turbolinks
 //= require_tree .
 
-$(function(){ $(document).foundation(); });
+(function($){
+  $(function(){
+    $('.button-collapse').sideNav();
+    $('.parallax').parallax();
+    $('ul.tabs').tabs();
+  });
+})(jQuery);

@@ -4,9 +4,12 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title><%= content_for?(:title) ? yield(:title) : "El Castillo de la Fantasía | Joyería de Fantasía Fina, Pelucas y Postizos, Extensiones de Cabello y todo lo relacionado al Cabello." %></title>
+    <title><%= content_for?(:title) ? yield(:title) : "El Castillo de la Fantasía Tienda en Línea | Joyería de Fantasía Fina, Pelucas y Postizos, Extensiones de Cabello y todo lo relacionado al Cabello." %></title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.1/css/materialize.min.css">
     <link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz' rel='stylesheet' type='text/css'>
-  
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
     <%= stylesheet_link_tag    "application" %>
     <%= javascript_include_tag "vendor/modernizr" %>
     <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
@@ -17,14 +20,12 @@
 
     <%= render :partial => "layouts/navbar" %>
 
-    <% if identity_signed_in?  %>
-      <%= render :partial => "products/topbar" %>
-    <% end %>
-
     <%= yield %>
 
     <%= render :partial => "layouts/footer" %>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.1/js/materialize.min.js"></script>
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <% if Rails.env.production? %>
       <%= render 'layouts/analytics' %>
       <script type="text/javascript">
