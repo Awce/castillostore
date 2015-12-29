@@ -1,7 +1,7 @@
 <div class="navbar-fixed">
   <ul id="dropdown1" class="dropdown-content purple-text">
-    <li><%= link_to "Productos  #{current_order.total_items}", basket_path %></li>
-    <li><%= link_to "Mi cuenta #{number_to_currency current_order.total_before_tax}", basket_path %></li>
+    <!-- <li><%= link_to "Productos  #{current_order.total_items}", basket_path %></li>
+    <li><%= link_to "Mi cuenta #{number_to_currency current_order.total_before_tax}", basket_path %></li> -->
     <li class="divider"></li>
     <li><%= link_to "Cerrar sesión", log_out_path, method: :delete %></li>
   </ul>
@@ -20,8 +20,8 @@
        </ul>
        <ul class="side-nav" id="mobile-demo">
          <% if identity_signed_in?  %>
-         <li><%= link_to "Productos #{current_order.total_items}", basket_path %></li>
-         <li><%= link_to "Mi cuenta #{number_to_currency current_order.total_before_tax}", basket_path %></li>
+         <!-- <li><%= link_to "Productos #{current_order.total_items}", basket_path %></li>
+         <li><%= link_to "Mi cuenta #{number_to_currency current_order.total_before_tax}", basket_path %></li> -->
          <li><%= link_to "Cerrar sesión", log_out_path, method: :delete %></li>
          <% else %>
          <li><%= link_to "Regístrate", sign_up_path  %></li>

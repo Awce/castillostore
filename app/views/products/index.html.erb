@@ -11,7 +11,7 @@
           <div class="card">
             <div class="card-image waves-effect waves-block waves-light">
               <% if product.default_image %>
-                <%= image_tag product.default_image.path, :width => '60px', :height => "200px" %>
+                <%= image_tag product.default_image.path, :width => '50px', :height => "200px" %>
               <% end %>
             </div>
             <div class="card-content">
@@ -27,15 +27,6 @@
         <% end %>
       <% end %>
     </div>
-    <ul class="pagination center-align">
-       <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
-       <li class="active"><a href="#!">1</a></li>
-       <li class="waves-effect"><a href="#!">2</a></li>
-       <li class="waves-effect"><a href="#!">3</a></li>
-       <li class="waves-effect"><a href="#!">4</a></li>
-       <li class="waves-effect"><a href="#!">5</a></li>
-       <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
-     </ul>
   </div>
 
 </div>
